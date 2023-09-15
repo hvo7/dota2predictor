@@ -45,7 +45,6 @@ The project also utilizes **unsupervised machine learning** to find relationship
 
 ## Machine Learning
 
-Describe the machine learning models and algorithms you used in this section.
 
 ## Data Collection
 
