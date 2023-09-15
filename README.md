@@ -20,7 +20,7 @@ The project uses **data analysis** and **data visualization** from various **Pyt
 
 From this, I can draw patterns to group and classify certain heroes together to determine what styles of play I am best/worst against so that I determine what playstyle should I focus on understanding.
 
-## Questions Answered
+## Questions to answer
 
 The project utilizes **supervised machine learning** to predict:
 
