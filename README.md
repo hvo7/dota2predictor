@@ -48,4 +48,4 @@ The project also utilizes **unsupervised machine learning** to find relationship
 
 ## Data Collection
 
-The project first web scrapes data from past personal match statistics from [stratz.com](https://stratz.com/dashboard). Although initially, I tried using Selenium to automate web scraping match data, I ended up manually inserting each match's HTML for my program to run.
+The project first web scrapes data from past personal match statistics from [stratz.com](https://stratz.com/dashboard). The automatic_webscraper program creates a dataframe then launches the matches page and filters by Hard Support and Ranked matches. The program then opens each match in a new tab and copies the HTML to a txt file. The scraper program then take the data and adds it to the dataframe. This process is repeated for each match automatically and will take approximately 30-40 min to complete all 401 matches. 
