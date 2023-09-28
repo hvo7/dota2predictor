@@ -44,8 +44,18 @@ The project also utilizes **unsupervised machine learning** to find relationship
   - What phase of the game the heroes are most impactful (early? mid? late?)
 
 ## Machine Learning
-
+Used **Binary Logitical Regression** with **Scikit-Learn** to predict win probability vs the following:
+ - Deaths
+ - Kills
+ - Assists
+ - Networth
 
 ## Data Collection
 
 The project first web scrapes data from past personal match statistics from [stratz.com](https://stratz.com/dashboard). The automatic_webscraper program creates a dataframe then launches the matches page and filters by Hard Support and Ranked matches. The program then opens each match in a new tab and copies the HTML to a txt file. The scraper program then take the data and adds it to the dataframe. This process is repeated for each match automatically and will take approximately 30-40 min to complete all 401 matches. 
+
+## Data Analysis
+Used **Matplotlib** to analyze and create graphs of various columns.
+ - Analyzed Kills, Deaths, Assists vs. Hero for all positions 1-5
+ - Also analyzed average KDA for each of heroes I played
+     - Constraint: Hero must have been played with/against >5 matches.
