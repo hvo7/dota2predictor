@@ -10,7 +10,14 @@ The purpose of this project is to determine and optimize what areas of the game,
 
 ## Introduction
 
-The project uses **data analysis** and **data visualization** from various **Python libraries** like **pandas** and **matplotlib** to answer the following questions:
+### Motivation
+This project focuses on predicting the outcome of Dota 2 matches based on hero compositions using neural networks and machine learning. A brief description on the premise of Dota 2 can be found from the link below
+
+- https://dota2.fandom.com/wiki/Dota_2
+
+Given the numerous complexities and concepts in the game, it can be challenging for players to pinpoint their weaknesses. To address this, I developed a prediction model to analyze playstyles and identify the types of heroes a player struggles against.
+
+I use **data analysis** and **data visualization** from various **Python libraries** like **pandas** and **matplotlib** to answer the following questions:
 
 - What set of enemy heroes am I best/worst against?
 - What set of ally heroes do I play the best/worst with?
@@ -18,9 +25,21 @@ The project uses **data analysis** and **data visualization** from various **Pyt
 - What Heroes do I play best/worst?
 - What heroes do I play that have the best/worst net worth?
 
-From this, I can draw patterns to group and classify certain heroes together to determine what styles of play I am best/worst against so that I determine what playstyle should I focus on understanding.
+## Extracting Data
 
-## Questions to answer
+I use the **Selenium** and **BeautifulSoup** packages alomg with **Pandas** to extract data of my personal matches recorded by Stratz.com (https://stratz.com/dashboard).
+I extracted features such as Win result (Win or Loss), Hero (The Hero I played), and Enemy/Ally Heroes (Positions 1-5 of all heroes in the game).
+
+## Data Analysis
+
+I cleaned the data to analyze more efficiently.
+I use **matplotlib** to plot variables and examine possible trends within the data.
+
+Used **Matplotlib** to analyze and create graphs of various columns.
+ - Analyzed Kills, Deaths, Assists vs. Hero for all positions 1-5
+ - Also analyzed average KDA for each of heroes I played
+     - Constraint: Hero must have been played with/against >5 matches.
+## Prediction
 
 The project utilizes **supervised machine learning** to predict:
 
@@ -50,12 +69,5 @@ Used **Binary Logitical Regression** with **Scikit-Learn** to predict win probab
  - Assists
  - Networth
 
-## Data Collection
 
-The project first web scrapes data from past personal match statistics from [stratz.com](https://stratz.com/dashboard). The automatic_webscraper program creates a dataframe then launches the matches page and filters by Hard Support and Ranked matches. The program then opens each match in a new tab and copies the HTML to a txt file. The scraper program then take the data and adds it to the dataframe. This process is repeated for each match automatically and will take approximately 30-40 min to complete all 401 matches. 
 
-## Data Analysis
-Used **Matplotlib** to analyze and create graphs of various columns.
- - Analyzed Kills, Deaths, Assists vs. Hero for all positions 1-5
- - Also analyzed average KDA for each of heroes I played
-     - Constraint: Hero must have been played with/against >5 matches.
